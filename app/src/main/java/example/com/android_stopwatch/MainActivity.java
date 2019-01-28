@@ -13,32 +13,32 @@ import android.widget.*;
 public class MainActivity extends AppCompatActivity
 {
     /**
-     * Object of  ImageButton which starts stopwatch.
+     * Object of  ImageButton. Is used to start stopwatch.
      */
     ImageButton imButtonStart;
 
     /**
-     * Object of ImageButton which resets time and laps.
+     * Object of ImageButton. Is used to reset time and laps.
      */
     ImageButton imButtonReset;
 
     /**
-     * Object of ImageButton which outputs  time of current lap to  list view and does new lap.
+     * Object of ImageButton. Is used to output time of current lap to listLaps and to do new lap.
      */
     ImageButton imButtonNewLap;
 
     /**
-     * Object of ImageButton which pauses stopwatch.
+     * Object of ImageButton. Is used to pause stopwatch.
      */
     ImageButton imButtonPause;
 
     /**
-     * Object of TextView where is updated time of current lap.
+     * Object of TextView. Holds updated time of current lap.
      */
     TextView tvTime;
 
     /**
-     * Object of ListView where is outputted time of every lap.
+     * Object of ListView. Holds outputted time of every lap.
      */
     ListView listLaps;
 
@@ -53,30 +53,30 @@ public class MainActivity extends AppCompatActivity
     long ticks=0;
 
     /**
-     * Time interval (in milliseconds) of a tick.
+     * Time interval (in milliseconds) of tick.
      */
     int interval=10;
 
     /**
-     * Object of class which is used for output
+     * Object of class. It's used to output time.
      */
     Time time=new Time();
 
     /**
-     * Object of class TimeAsyncTask.
+     * Object of class TimeAsyncTask. Is used to move laborious operations in the background thread.
      */
     public TimeAsyncTask timeAsyncTask;
 
     /**
-     * Object of class ArrayAdapter. It's used for fill of listLaps.
+     * Object of class ArrayAdapter. Is used to fill listLaps.
      */
     ArrayAdapter adapter;
 
     /**
-     * Creates Activity.
+     * Creates MainActivity.
      *
      * @param savedInstanceState
-     *                          object of class Bundle. It's saved instance state of activity.
+     *                          object of class Bundle. Is saved instance state of activity.
      *
      */
     @Override
@@ -106,10 +106,11 @@ public class MainActivity extends AppCompatActivity
     }
 
     /**
-     * Happens reaction to click on startImageButton. Starts  stopwatch.
+     * Reaction to click on startImageButton happens. Starts  stopwatch.
      *
      * @param v
      *          object of class View which responds for event handling and is used for widgets.
+     *
      */
     public void onStartClick(View v)
     {
@@ -126,10 +127,11 @@ public class MainActivity extends AppCompatActivity
     }
 
     /**
-     * Happens  reaction to click on ResetImageButton. Resets time and laps.
+     * Reaction to click on ResetImageButton happens. Resets time and laps.
      *
      * @param v
      *          object of class View which responds for event handling and is used for widgets.
+     *
      */
     public void onResetClick(View v)
     {
@@ -152,10 +154,11 @@ public class MainActivity extends AppCompatActivity
     }
 
     /**
-     * Happens reaction to click on PauseImageButton. Pauses stopwatch.
+     * Reaction to click on PauseImageButton happens. Pauses stopwatch.
      *
      * @param v
      *          object of class View which responds for event handling and is used for widgets.
+     *
      */
     public void onPauseClick(View v)
     {
@@ -171,11 +174,12 @@ public class MainActivity extends AppCompatActivity
     }
 
     /**
-     * Happens reaction to click on newLapImageButton.
+     * Reaction to click on newLapImageButton happens .
      * Outputs time of current lap to list view and does new lap.
      *
      * @param v
      *          object of class View which responds for event handling and is used for widgets.
+     *
      */
     public void onNewLapClick(View v)
     {
@@ -296,6 +300,7 @@ public class MainActivity extends AppCompatActivity
          *              input parameters.
          *
          * @return null (end of async task if canceled).
+         *
          */
         @Override
         protected Void doInBackground(Void... params)
@@ -321,6 +326,7 @@ public class MainActivity extends AppCompatActivity
          *
          * @param values
          *              saved values in method publishProgress(values)-intermediate parameter.
+         *
          */
         @Override
         protected void onProgressUpdate(Long... values)
@@ -415,7 +421,7 @@ public class MainActivity extends AppCompatActivity
         }
 
         /**
-         * This method is performed before method doInBackground(Void... params)
+         * This method is performed before method doInBackground(Void... params).
          */
         @Override
         protected void onPreExecute()
@@ -424,10 +430,11 @@ public class MainActivity extends AppCompatActivity
         }
 
         /**
-         * This method is performed after method doInBackground(Void... params)
+         * This method is performed after method doInBackground(Void... params).
          *
          * @param aVoid
          *              output parameter.
+         *
          */
         @Override
         protected void onPostExecute(Void aVoid)

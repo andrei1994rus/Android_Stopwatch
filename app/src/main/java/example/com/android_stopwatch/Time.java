@@ -3,14 +3,21 @@ package example.com.android_stopwatch;
 import java.util.concurrent.TimeUnit;
 
 /**
- * Class is used for outputting time.
+ * This class is used to output time.
  */
 public class Time
 {
     /**
      * Outputs seconds.
      *
+     * @param value_t
+     *               saved values in method publishProgress(values).
+     *
+     * @param interval
+     *                time interval (in milliseconds) of tick.
+     *
      * @return seconds.
+     *
      */
     public final double getSeconds(long value_t,int interval)
     {
@@ -21,7 +28,14 @@ public class Time
     /**
      * Outputs minutes.
      *
+     * @param value_t
+     *               saved values in method publishProgress(values).
+     *
+     * @param interval
+     *                time interval (in milliseconds) of tick.
+     *
      * @return minutes.
+     *
      */
     public final long getMinutes(long value_t,int interval)
     {
@@ -32,7 +46,14 @@ public class Time
     /**
      * Outputs hours.
      *
+     * @param value_t
+     *               saved values in method publishProgress(values).
+     *
+     * @param interval
+     *                time interval (in milliseconds) of tick.
+     *
      * @return hours.
+     *
      */
     public final long getHours(long value_t,int interval)
     {
