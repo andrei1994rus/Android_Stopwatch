@@ -174,7 +174,7 @@ public class MainActivity extends AppCompatActivity
     }
 
     /**
-     * Reaction to click on newLapImageButton happens .
+     * Reaction to click on newLapImageButton happens.
      * Outputs time of current lap to list view and does new lap.
      *
      * @param v
