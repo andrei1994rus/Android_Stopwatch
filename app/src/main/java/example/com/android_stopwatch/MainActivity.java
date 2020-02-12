@@ -85,17 +85,17 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        imButtonStart=(ImageButton) findViewById(R.id.imageButtonStart);
+        imButtonStart=findViewById(R.id.imageButtonStart);
 
-        imButtonReset=(ImageButton) findViewById(R.id.imageButtonReset);
+        imButtonReset=findViewById(R.id.imageButtonReset);
 
-        imButtonNewLap=(ImageButton) findViewById(R.id.imageButtonNewLap);
+        imButtonNewLap=findViewById(R.id.imageButtonNewLap);
 
-        imButtonPause=(ImageButton) findViewById(R.id.imageButtonPause);
+        imButtonPause=findViewById(R.id.imageButtonPause);
 
-        tvTime=(TextView) findViewById(R.id.Time_of_Lap);
+        tvTime=findViewById(R.id.Time_of_Lap);
 
-        listLaps=(ListView) findViewById(R.id.list);
+        listLaps=findViewById(R.id.list);
 
         adapter=new ArrayAdapter(this,android.R.layout.simple_list_item_1);
         listLaps.setAdapter(adapter);
@@ -193,7 +193,7 @@ public class MainActivity extends AppCompatActivity
 
         long hours=time.getHours(ticks,interval);
 
-        if (hours<10
+        if(hours<10
                 && minutes<10
                 && seconds<10)
         {
@@ -204,7 +204,7 @@ public class MainActivity extends AppCompatActivity
                     seconds));
         }
 
-        else if (hours<10
+        else if(hours<10
                 && minutes<10
                 && seconds>=10)
         {
@@ -215,7 +215,7 @@ public class MainActivity extends AppCompatActivity
                     seconds));
         }
 
-        else if (hours<10
+        else if(hours<10
                 && minutes>=10
                 && seconds>=10)
         {
@@ -226,7 +226,7 @@ public class MainActivity extends AppCompatActivity
                     seconds));
         }
 
-        else if (hours<10
+        else if(hours<10
                 && minutes>=10
                 && seconds<10)
         {
@@ -237,7 +237,7 @@ public class MainActivity extends AppCompatActivity
                     seconds));
         }
 
-        else if (hours>=10
+        else if(hours>=10
                 && minutes<10
                 && seconds<10)
         {
@@ -248,7 +248,7 @@ public class MainActivity extends AppCompatActivity
                     seconds));
         }
 
-        else if (hours>=10
+        else if(hours>=10
                 && minutes<10
                 && seconds>=10)
         {
@@ -259,7 +259,7 @@ public class MainActivity extends AppCompatActivity
                     seconds));
         }
 
-        else if (hours>=10
+        else if(hours>=10
                 && minutes>=10
                 && seconds<10)
         {
@@ -270,7 +270,7 @@ public class MainActivity extends AppCompatActivity
                     seconds));
         }
 
-        else if (hours>=10
+        else if(hours>=10
                 && minutes>=10
                 && seconds>=10)
         {
@@ -290,7 +290,7 @@ public class MainActivity extends AppCompatActivity
     /**
      * Class which extends from AsyncTask. Is used for work of stopwatch.
      */
-    public class TimeAsyncTask extends AsyncTask<Void, Long, Void>
+    public class TimeAsyncTask extends AsyncTask<Void,Long,Void>
     {
 
         /**
@@ -305,7 +305,7 @@ public class MainActivity extends AppCompatActivity
         @Override
         protected Void doInBackground(Void... params)
         {
-            while (true)
+            while(true)
             {
                 ticks++;
 
@@ -313,7 +313,7 @@ public class MainActivity extends AppCompatActivity
 
                 SystemClock.sleep(interval);
 
-                if (isCancelled())
+                if(isCancelled())
                 {
                     return null;
                 }
@@ -339,7 +339,7 @@ public class MainActivity extends AppCompatActivity
 
             long hours=time.getHours(values[0],interval);
 
-            if (hours<10
+            if(hours<10
                     && minutes<10
                     && seconds<10)
             {
@@ -349,7 +349,7 @@ public class MainActivity extends AppCompatActivity
                         seconds));
             }
 
-            else if (hours<10
+            else if(hours<10
                     && minutes<10
                     && seconds>=10)
             {
@@ -359,7 +359,7 @@ public class MainActivity extends AppCompatActivity
                         seconds));
             }
 
-            else if (hours<10
+            else if(hours<10
                     && minutes>=10
                     && seconds>=10)
             {
@@ -369,7 +369,7 @@ public class MainActivity extends AppCompatActivity
                         seconds));
             }
 
-            else if (hours<10
+            else if(hours<10
                     && minutes>=10
                     && seconds<10)
             {
@@ -379,7 +379,7 @@ public class MainActivity extends AppCompatActivity
                         seconds));
             }
 
-            else if (hours>=10
+            else if(hours>=10
                     && minutes<10
                     && seconds<10)
             {
@@ -389,7 +389,7 @@ public class MainActivity extends AppCompatActivity
                         seconds));
             }
 
-            else if (hours>=10
+            else if(hours>=10
                     && minutes<10
                     && seconds>=10)
             {
@@ -399,7 +399,7 @@ public class MainActivity extends AppCompatActivity
                         seconds));
             }
 
-            else if (hours>=10
+            else if(hours>=10
                     && minutes>=10
                     && seconds<10)
             {
@@ -409,7 +409,7 @@ public class MainActivity extends AppCompatActivity
                         seconds));
             }
 
-            else if (hours>=10
+            else if(hours>=10
                     && minutes>=10
                     && seconds>=10)
             {

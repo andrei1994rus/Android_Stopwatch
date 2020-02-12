@@ -21,8 +21,7 @@ public class Time
      */
     public final double getSeconds(long value_t,int interval)
     {
-        double seconds=(value_t*interval)/1000.0%60;
-        return seconds;
+        return (value_t*interval)/1000.0%60;
     }
 
     /**
@@ -39,8 +38,7 @@ public class Time
      */
     public final long getMinutes(long value_t,int interval)
     {
-        long minutes=TimeUnit.MILLISECONDS.toMinutes(value_t*interval)%60;
-        return minutes;
+        return TimeUnit.MILLISECONDS.toMinutes(value_t*interval)%60;
     }
 
     /**
@@ -57,8 +55,7 @@ public class Time
      */
     public final long getHours(long value_t,int interval)
     {
-        long hours=TimeUnit.MILLISECONDS.toHours(value_t*interval);
-        return hours;
+        return TimeUnit.MILLISECONDS.toHours(value_t*interval);
     }
 }
 
